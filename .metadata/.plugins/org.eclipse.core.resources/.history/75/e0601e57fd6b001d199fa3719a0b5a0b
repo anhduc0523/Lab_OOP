@@ -1,0 +1,12 @@
+package lab02;
+
+public class Store {
+	public int quantity = 0;
+	private static final int MAX_NUMBERS = 100;
+	public final DigitalVideoDisc[] itemsInStore = new DigitalVideoDisc[MAX_NUMBERS];
+	//private static int nbDigitalVideoDiscs = 0;
+	public int getquantity() {
+        return quantity;
+    }
+	
+}

@@ -1,0 +1,40 @@
+package lab02;
+
+import java.util.List;
+
+public class Storetest {
+	public void addDigitalVideoDisc(DigitalVideoDisc disc) {
+		itemsInStore[quantity] = disc;
+        quantity ++;
+    }
+    
+	public void addDigitalVideoDisc(List<DigitalVideoDisc> discList) {
+		for(DigitalVideoDisc disc: discList) {
+			this.addDigitalVideoDisc(disc);
+		}
+	}
+	
+	public String addDigitalVideoDisc(DigitalVideoDisc disc1, DigitalVideoDisc disc2) {
+        this.addDigitalVideoDisc(disc1);
+        this.addDigitalVideoDisc(disc2);
+        return "The disc has been added"; 
+    }
+	
+	public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
+        int count = quantity;
+        DigitalVideoDisc currentDisc = null;
+        for (int i = 0; i < quantity; i++) {
+            currentDisc = itemsInStore[i];
+            if (currentDisc.equals(disc)) {
+                for (int j = i + 1; j < quantity; j++) {
+                    itemsInStore[j - 1] = itemsInStore[j];
+                }
+                itemsInStore[quantity] = null;
+                quantity --;
+            }
+        }
+        if (quantity != count) System.out.println((count - quantity) + " item(s) has/have been removed.");
+        else System.out.println("Can't found item."); 
+    }
+
+}

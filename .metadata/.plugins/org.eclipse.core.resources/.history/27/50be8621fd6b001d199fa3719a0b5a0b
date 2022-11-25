@@ -1,0 +1,21 @@
+package lab02;
+
+import java.util.List;
+
+public class Store {
+	private int quantity = 0;
+	private static final int MAX_NUMBERS = 100;
+	private final DigitalVideoDisc[] itemsInStore = new DigitalVideoDisc[MAX_NUMBERS];
+	public int getquantity() {
+        return quantity;
+    }
+	
+	public void setqtyOrdered(int quantity) {
+        this.quantity = quantity;
+    }
+	
+	public void addDigitalVideoDisc(DigitalVideoDisc disc) {
+		
+    }
+    
+}

@@ -1,0 +1,9 @@
+package lab02;
+
+public class Storetest {
+	Store aStore = new Store();
+	DigitalVideoDisc dvd1 = new DigitalVideoDisc("Toi thay hoa vang tren co xanh", "Truyen ngan",
+            "Nguyen Nhat Anh", 200, 21.05);
+    aStore.;
+
+}

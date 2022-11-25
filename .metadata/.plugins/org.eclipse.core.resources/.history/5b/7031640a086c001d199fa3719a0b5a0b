@@ -1,0 +1,8 @@
+Is JAVA a Pass by Value or a Pass by Reference programming language?Java is always Pass by Value and not pass by reference, we can prove it with a simple example. Let's say we have a class Balloon like below. And we have a simple program with a generic method to swap two objects, the class looks like below
+
+After the call of swap(jungleDVD, cinderellaDVD) why does the title of these two objects still remain? 
+bởi ở trong hàm swap dòng Object tmp = o1 đã tạo ra biến tmp có trùng địa chỉ với o1
+còn 2 dòng sau thì o1 và o2 sẽ không thể thay đổi được địa chỉ của chúng sang địa chỉ mới được nên kết quả title của chúng vẫn sẽ như cũ 
+
+After the call of changeTitle(jungleDVD, cinderellaDVD.getTitle()) why is the title of the JungleDVD changed? bởi vì hàm truyền tham chiếu đến địa chỉ của biến nhớ nên trong hàm chạy sẽ thay đổi được giá trị đang lưu trữ của biến
+

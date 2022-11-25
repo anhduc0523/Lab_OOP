@@ -1,0 +1,40 @@
+-------------------------------------------------------------------------------
+If you create a constructor method to build a DVD by title then create a 
+constructor method to build a DVD by category. Does JAVA allow you to do this?
+-------------------------------------------------------------------------------
+Answer:
++ constructor method to build a DVD by title:
+public DigitalVideoDisc(String title) {
+	this.title = title;
+}
+
+==> A method Signature = DigitalVideoDisc + String
+
++ constructor method to build a DVD by category
+public DigitalVideoDisc(String category) {
+	this.category = category;
+}
+
+==> A method Signature = DigitalVideoDisc + String
+
+
+=> So, because two constructors are same signature, bug is happend.
+JAVA don't allow to do this.
+
+
+-------------------------------------------------------------------------------
+ReadingAssignment: When should accessor be used?
+-------------------------------------------------------------------------------
+
+When I want to protect data of objects, I encapsulation its. Accessor is getter
+and setter. Its helps you get data of an object, update data of an object.
+
+Is JAVA a Pass by Value or a Pass by Reference programming language?
+Java is always Pass by Value and not pass by reference, we can prove it with a simple example. Let's say we have a class Balloon like below. And we have a simple program with a generic method to swap two objects, the class looks like below
+
+After the call of swap(jungleDVD, cinderellaDVD) why does the title of these two objects still remain? 
+bởi ở trong hàm swap dòng Object tmp = o1 đã tạo ra biến tmp có trùng địa chỉ với o1
+còn 2 dòng sau thì o1 và o2 sẽ không thể thay đổi được địa chỉ của chúng sang địa chỉ mới được nên kết quả title của chúng vẫn sẽ như cũ 
+
+After the call of changeTitle(jungleDVD, cinderellaDVD.getTitle()) why is the title of the JungleDVD changed? 
+Bởi vì dòng code dvd = new DigitalVideoDisc(oldTitle) sẽ làm cho dvd thay đổi địa chỉ của nó nên nó sẽ được tham chiếu đến vùng địa chỉ mới trên ô nhớ và sẽ thay đổi nội dung của nó theo nội dung trên ô nhớ mới
